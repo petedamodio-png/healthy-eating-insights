@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAFAF8;
+    color: #6B6B6B;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    color: #1A1A1A;
+    font-weight: normal;
+  }
+
+  a, button, input {
+    /* No transitions, only standard hover states as requested */
+  }
+
+  /* Reset outline to match custom border styling */
+  input:focus {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8FBF8A;
+  }
+
+  .btn-pill {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 24px;
+    padding: 10px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.5px;
+    border-color: transparent;
+  }
+
+  .btn-sage {
+    background-color: #8FBF8A;
+    color: #FFFFFF;
+  }
+
+  .btn-sage:hover {
+    background-color: #4A7A46;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    border-color: #DDDDDA;
+    color: #1A1A1A;
+  }
+
+  .btn-outline:hover {
+    background-color: #F2F2EF;
+  }
+
+  .section-pad {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .container-custom {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .article-max-width {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
