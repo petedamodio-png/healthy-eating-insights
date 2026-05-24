@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 export default function AlwaysHungry() {
   useEffect(() => {
@@ -42,8 +40,6 @@ export default function AlwaysHungry() {
 
   return (
     <div className="w-full">
-      <Header />
-      
       <main className="min-h-screen bg-off-white">
         {/* Article Header */}
         <section className="section-pad bg-off-white">
@@ -380,8 +376,6 @@ export default function AlwaysHungry() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
