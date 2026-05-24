@@ -18,6 +18,14 @@ export default function Blog() {
   const articles = [
     {
       category: "Nutrition Basics",
+      title: "Why You're Always Hungry After Eating Healthy — And How to Fix It",
+      label: "Getting Started",
+      readTime: "7 min read &rarr;",
+      link: "/blog/always-hungry-eating-healthy",
+      description: "It's not a willpower problem. Here's exactly what's going wrong and how to fix it."
+    },
+    {
+      category: "Nutrition Basics",
       title: "How to Actually Start Eating Healthy — A Realistic Guide",
       label: "Getting Started",
       readTime: "8 min read &rarr;",
@@ -122,6 +130,12 @@ export default function Blog() {
                         alt="Simple healthy breakfast flat lay with natural window light on linen surface"
                         className="w-full h-48 object-cover rounded-t-xl"
                       />
+                    ) : art.link === "/blog/always-hungry-eating-healthy" ? (
+                      <div className="h-48 bg-sage-light flex items-center justify-center rounded-t-xl">
+                        <p className="font-sans text-sm text-sage-dark text-center px-8">
+                          Hero image — satisfying grain bowl with visible protein, avocado, colourful vegetables
+                        </p>
+                      </div>
                     ) : (
                       <div className="h-[90px] bg-sage-light flex flex-col items-center justify-center border-b-0.5 border-border-gray select-none">
                         <span className="font-serif text-[13px] text-near-black italic">

@@ -16,6 +16,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import AffiliateDisclaimer from './pages/AffiliateDisclaimer';
 import Contact from './pages/Contact';
 import HowToStartEatingHealthy from './pages/HowToStartEatingHealthy';
+import AlwaysHungry from './pages/AlwaysHungry';
 
 // Scroll to top helper
 function ScrollToTop() {
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/favourites" element={<Favourites />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/how-to-start-eating-healthy" element={<HowToStartEatingHealthy />} />
+            <Route path="/blog/always-hungry-eating-healthy" element={<AlwaysHungry />} />
             <Route path="/optin" element={<OptIn />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
