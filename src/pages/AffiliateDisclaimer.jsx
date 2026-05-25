@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function AffiliateDisclaimer() {
   const sections = [
@@ -59,7 +57,7 @@ export default function AffiliateDisclaimer() {
       eyebrow: 'Questions',
       title: 'Still have questions?',
       content: (
-        <p>If you have any questions about our affiliate relationships or editorial policies, please contact us at <a href="mailto:pete@healthyeatinginsights.com" className="text-sage hover:text-sage-dark">pete@healthyeatinginsights.com</a>.</p>
+        <p>If you have any questions about our affiliate relationships or editorial policies, please contact us at <a href="mailto:pete@healthyeatinginsights.com" className="text-theme-sage hover:text-theme-sage-dark">pete@healthyeatinginsights.com</a>.</p>
       )
     }
   ];
@@ -67,43 +65,43 @@ export default function AffiliateDisclaimer() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[780px] mx-auto">
           <span className="eyebrow">Legal</span>
-          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-near-black font-serif mt-4 mb-6">
+          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-theme-primary font-serif mt-4 mb-6">
             Affiliate Disclaimer
           </h1>
-          <p className="font-sans text-[13px] text-text-gray font-light leading-relaxed">
+          <p className="font-sans text-[13px] text-theme-secondary font-light leading-relaxed">
             Last updated: May 2026
           </p>
         </div>
       </section>
 
       {/* Disclaimer Sections */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[780px] mx-auto">
           {sections.map((section, idx) => (
             <div key={idx} className="relative">
               <div className="mb-8">
                 <span className="eyebrow text-[14px]">{section.eyebrow}</span>
-                <h2 className="text-[28px] md:text-[32px] text-near-black font-serif mt-3 mb-6">
+                <h2 className="text-[28px] md:text-[32px] text-theme-primary font-serif mt-3 mb-6">
                   {section.title}
                 </h2>
-                <div className="font-sans text-[16px] text-text-gray leading-[1.7] space-y-4">
+                <div className="font-sans text-[16px] text-theme-secondary leading-[1.7] space-y-4">
                   {section.content}
                 </div>
               </div>
               
               {/* Section divider */}
               {idx < sections.length - 1 && (
-                <div className="border-b-0.5 border-border-gray my-8" />
+                <div className="border-b-0.5 border-theme-border my-8" />
               )}
 
               {/* Back to top link (desktop only) */}
               <div className="hidden md:block absolute right-0 bottom-0">
                 <a 
                   href="#top" 
-                  className="font-sans text-[13px] text-sage hover:text-sage-dark"
+                  className="font-sans text-[13px] text-theme-sage hover:text-theme-sage-dark"
                   onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });

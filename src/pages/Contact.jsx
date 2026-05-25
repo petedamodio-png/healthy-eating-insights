@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             
@@ -52,10 +52,10 @@ export default function Contact() {
             <div className="space-y-8">
               <div>
                 <span className="eyebrow">Get in touch</span>
-                <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-near-black font-serif mt-4 mb-6">
+                <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-theme-primary font-serif mt-4 mb-6">
                   Contact Us
                 </h1>
-                <p className="font-sans text-[16px] text-text-gray leading-[1.7]">
+                <p className="font-sans text-[16px] text-theme-secondary leading-[1.7]">
                   Have a question, a product suggestion, a collaboration enquiry, or just want to say hello? We read every message and aim to reply within 2–3 business days.
                 </p>
               </div>
@@ -71,8 +71,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-[14px] text-near-black leading-none mb-1">Email</p>
-                    <a href="mailto:pete@healthyeatinginsights.com" className="font-sans text-[14px] text-text-gray hover:text-sage">
+                    <p className="font-sans font-medium text-[14px] text-theme-primary leading-none mb-1">Email</p>
+                    <a href="mailto:pete@healthyeatinginsights.com" className="font-sans text-[14px] text-theme-secondary hover:text-theme-sage">
                       pete@healthyeatinginsights.com
                     </a>
                   </div>
@@ -87,8 +87,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-[14px] text-near-black leading-none mb-1">Based in</p>
-                    <p className="font-sans text-[14px] text-text-gray">Italy · Serving readers worldwide</p>
+                    <p className="font-sans font-medium text-[14px] text-theme-primary leading-none mb-1">Based in</p>
+                    <p className="font-sans text-[14px] text-theme-secondary">Italy · Serving readers worldwide</p>
                   </div>
                 </div>
 
@@ -101,22 +101,22 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-[14px] text-near-black leading-none mb-1">Response time</p>
-                    <p className="font-sans text-[14px] text-text-gray">Within 2–3 business days</p>
+                    <p className="font-sans font-medium text-[14px] text-theme-primary leading-none mb-1">Response time</p>
+                    <p className="font-sans text-[14px] text-theme-secondary">Within 2–3 business days</p>
                   </div>
                 </div>
               </div>
 
               {/* Press/Partnership Note */}
-              <div className="bg-sage-light rounded-card p-4">
-                <p className="font-sans text-[13px] text-text-gray leading-relaxed">
+              <div className="bg-theme-sage-light rounded-card p-4">
+                <p className="font-sans text-[13px] text-theme-secondary leading-relaxed">
                   For press, partnership, or brand collaboration enquiries, please include details about your brand and what you have in mind. We work with brands whose values align with ours — honest, health-focused, and genuinely useful for women.
                 </p>
               </div>
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="bg-white border-0.5 border-border-gray rounded-card p-6">
+            <div className="bg-theme-surface border-0.5 border-theme-border rounded-card p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Name */}
                 <div>
@@ -129,7 +129,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full font-sans text-[14px] text-near-black placeholder-text-gray border-0.5 border-border-gray rounded-card p-3 focus:border-sage"
+                    className="w-full font-sans text-[14px] text-theme-primary placeholder-theme-secondary border-0.5 border-theme-border rounded-card p-3 focus:border-theme-sage"
                   />
                 </div>
 
@@ -144,7 +144,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full font-sans text-[14px] text-near-black placeholder-text-gray border-0.5 border-border-gray rounded-card p-3 focus:border-sage"
+                    className="w-full font-sans text-[14px] text-theme-primary placeholder-theme-secondary border-0.5 border-theme-border rounded-card p-3 focus:border-theme-sage"
                   />
                 </div>
 
@@ -156,7 +156,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full font-sans text-[14px] text-near-black border-0.5 border-border-gray rounded-card p-3 focus:border-sage bg-white"
+                    className="w-full font-sans text-[14px] text-theme-primary border-0.5 border-theme-border rounded-card p-3 focus:border-theme-sage bg-theme-surface"
                   >
                     <option value="General question">General question</option>
                     <option value="Product recommendation">Product recommendation</option>
@@ -177,7 +177,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full font-sans text-[14px] text-near-black placeholder-text-gray border-0.5 border-border-gray rounded-card p-3 focus:border-sage resize-none"
+                    className="w-full font-sans text-[14px] text-theme-primary placeholder-theme-secondary border-0.5 border-theme-border rounded-card p-3 focus:border-theme-sage resize-none"
                   />
                 </div>
 
@@ -190,8 +190,8 @@ export default function Contact() {
                 </button>
 
                 {/* Disclaimer Text */}
-                <p className="font-sans text-[12px] text-text-gray font-light text-center">
-                  We aim to reply within 2–3 business days. For urgent matters, email <a href="mailto:pete@healthyeatinginsights.com" className="text-sage hover:text-sage-dark">pete@healthyeatinginsights.com</a> directly.
+                <p className="font-sans text-[12px] text-theme-secondary font-light text-center">
+                  We aim to reply within 2–3 business days. For urgent matters, email <a href="mailto:pete@healthyeatinginsights.com" className="text-theme-sage hover:text-theme-sage-dark">pete@healthyeatinginsights.com</a> directly.
                 </p>
               </form>
             </div>
@@ -200,11 +200,11 @@ export default function Contact() {
       </section>
 
       {/* Quick Links Section */}
-      <section className="section-pad bg-light-gray">
+      <section className="section-pad bg-theme-alt">
         <div className="container-custom max-w-[1100px] mx-auto">
           <div className="text-center space-y-3 mb-8">
             <span className="eyebrow">Before you write</span>
-            <h2 className="text-[32px] md:text-[36px] text-near-black font-serif">You might find your answer here.</h2>
+            <h2 className="text-[32px] md:text-[36px] text-theme-primary font-serif">You might find your answer here.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -212,12 +212,12 @@ export default function Contact() {
               <Link
                 key={idx}
                 to={link.link}
-                className="bg-white border-0.5 border-border-gray rounded-card p-4 hover:border-sage transition-colors"
+                className="bg-theme-surface border-0.5 border-theme-border rounded-card p-4 hover:border-theme-sage transition-colors"
               >
-                <h3 className="font-sans font-medium text-[14px] text-near-black mb-2">
+                <h3 className="font-sans font-medium text-[14px] text-theme-primary mb-2">
                   {link.title}
                 </h3>
-                <p className="font-sans text-[13px] text-text-gray leading-relaxed">
+                <p className="font-sans text-[13px] text-theme-secondary leading-relaxed">
                   {link.desc}
                 </p>
               </Link>

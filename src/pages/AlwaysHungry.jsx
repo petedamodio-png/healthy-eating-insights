@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import proteinBowlImage from '../assets/images/protein-bowl.png';
 
 export default function AlwaysHungry() {
   useEffect(() => {
@@ -40,39 +41,38 @@ export default function AlwaysHungry() {
 
   return (
     <div className="w-full">
-      <main className="min-h-screen bg-off-white">
+      <main className="min-h-screen bg-theme-bg">
         {/* Article Header */}
-        <section className="section-pad bg-off-white">
+        <section className="section-pad bg-theme-bg">
           <div className="container-custom max-w-[780px] mx-auto">
             <span className="eyebrow">NUTRITION BASICS</span>
-            <h1 className="font-serif text-[36px] md:text-[48px] leading-[1.15] text-near-black mt-4 mb-4">
+            <h1 className="font-serif text-[36px] md:text-[48px] leading-[1.15] text-theme-primary mt-4 mb-4">
               Why You're Always Hungry After Eating Healthy — And How to Fix It
             </h1>
-            <p className="font-sans text-sm text-text-gray mb-2">
+            <p className="font-sans text-sm text-theme-secondary mb-2">
               It's not a willpower problem. It's a meal composition problem.
             </p>
-            <p className="font-sans text-xs text-text-gray font-light">
+            <p className="font-sans text-xs text-theme-secondary font-light">
               7 min read
             </p>
             
-            {/* Hero Image Placeholder */}
-            <div className="mt-8 h-96 bg-sage-light rounded-xl flex items-center justify-center">
-              <p className="font-sans text-sm text-sage-dark text-center px-8">
-                Hero image — satisfying grain bowl with visible protein, avocado, colourful vegetables, natural window light
-              </p>
-            </div>
+            <img
+              src={proteinBowlImage}
+              alt="Protein grain bowl with chicken, egg, avocado, vegetables, and quinoa on a linen-covered table"
+              className="mt-8 h-96 w-full rounded-xl object-cover"
+            />
           </div>
         </section>
 
         {/* Article Body - Two Column Layout */}
-        <section className="section-pad bg-off-white">
+        <section className="section-pad bg-theme-bg">
           <div className="container-custom max-w-[1100px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               
               {/* Left Column - Article Content */}
               <div className="lg:col-span-2">
                 {/* Intro */}
-                <div className="font-sans text-lg text-text-gray leading-[1.7] mb-6">
+                <div className="font-sans text-lg text-theme-secondary leading-[1.7] mb-6">
                   <p className="mb-4">
                     You switched to salads. You cut out the junk. You're eating vegetables and lean protein and trying to do everything right — and you're ravenously hungry two hours later.
                   </p>
@@ -86,10 +86,10 @@ export default function AlwaysHungry() {
 
                 {/* H2: What's actually happening when you feel hungry */}
                 <div className="mb-5">
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-4">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-4">
                     What's actually happening when you feel hungry
                   </h2>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Hunger is controlled by a hormonal conversation between your gut and your brain. The hunger hormone ghrelin rises when your stomach is empty and signals your brain to seek food. After eating, your gut releases satiety hormones — GLP-1, PYY, and CCK — which travel to the brain and signal that the meal is done.
                     </p>
@@ -103,16 +103,16 @@ export default function AlwaysHungry() {
                 </div>
 
                 {/* Pull Quote */}
-                <div className="font-serif italic text-xl text-near-black border-l-4 border-sage pl-5 py-2 bg-light-gray rounded-r-xl my-8">
+                <div className="font-serif italic text-xl text-theme-primary border-l-4 border-theme-sage pl-5 py-2 bg-theme-alt rounded-r-xl my-8">
                   "Hunger after a healthy meal isn't a willpower problem. It's a meal composition problem — and it's almost always fixable."
                 </div>
 
                 {/* H2: Why most healthy meals aren't actually filling */}
                 <div className="mb-5">
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-4">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-4">
                     Why most healthy meals aren't actually filling
                   </h2>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       The most common mistake isn't eating badly. It's swapping calorie-dense food for low-calorie-density food without understanding what made the original meal satisfying.
                     </p>
@@ -126,20 +126,20 @@ export default function AlwaysHungry() {
                 </div>
 
                 {/* Inline Email Opt-in Box */}
-                <div className="bg-sage-light rounded-xl p-6 my-8">
-                  <p className="font-sans text-xs uppercase tracking-widest text-sage font-medium mb-2">
+                <div className="bg-theme-sage-light rounded-xl p-6 my-8">
+                  <p className="font-sans text-xs uppercase tracking-widest text-theme-sage font-medium mb-2">
                     FREE DOWNLOAD
                   </p>
-                  <h3 className="font-sans text-lg font-bold text-near-black mb-2">
+                  <h3 className="font-sans text-lg font-bold text-theme-primary mb-2">
                     Get meals that actually keep you full
                   </h3>
-                  <p className="font-sans text-sm text-text-gray mb-4">
+                  <p className="font-sans text-sm text-theme-secondary mb-4">
                     The free Clean Eating Starter Guide includes a 5-day meal plan built around exactly these principles — every meal designed to satisfy, not just nourish.
                   </p>
                   <input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full border border-border-gray rounded-full px-4 py-2 text-sm mb-3 font-sans"
+                    className="w-full border border-theme-border rounded-full px-4 py-2 text-sm mb-3 font-sans"
                   />
                   <a 
                     href="[SYSTEME_OPTIN_URL]"
@@ -151,17 +151,17 @@ export default function AlwaysHungry() {
 
                 {/* H2: The five real reasons you're still hungry */}
                 <div className="mb-5">
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-4">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-4">
                     The five real reasons you're still hungry
                   </h2>
                 </div>
 
                 {/* H3: 1. Not enough protein at each meal */}
                 <div className="mb-5">
-                  <h3 className="font-sans font-medium text-xl text-near-black mt-8 mb-3">
+                  <h3 className="font-sans font-medium text-xl text-theme-primary mt-8 mb-3">
                     1. Not enough protein at each meal
                   </h3>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Protein is the most satiating macronutrient. It has the strongest effect on reducing ghrelin and triggering satiety hormones after eating. Higher protein meals consistently produce significantly reduced appetite for hours afterwards.
                     </p>
@@ -176,10 +176,10 @@ export default function AlwaysHungry() {
 
                 {/* H3: 2. Fat has been cut too aggressively */}
                 <div className="mb-5">
-                  <h3 className="font-sans font-medium text-xl text-near-black mt-8 mb-3">
+                  <h3 className="font-sans font-medium text-xl text-theme-primary mt-8 mb-3">
                     2. Fat has been cut too aggressively
                   </h3>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Fat slows how quickly your stomach empties, which directly extends how long you feel full. It also triggers the release of satiety hormones in the small intestine. When meals are low in fat, food moves through the digestive system faster and hunger returns sooner.
                     </p>
@@ -194,10 +194,10 @@ export default function AlwaysHungry() {
 
                 {/* H3: 3. Calorie density dropped too sharply */}
                 <div className="mb-5">
-                  <h3 className="font-sans font-medium text-xl text-near-black mt-8 mb-3">
+                  <h3 className="font-sans font-medium text-xl text-theme-primary mt-8 mb-3">
                     3. Calorie density dropped too sharply
                   </h3>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Vegetables are excellent food. They're also very low in calories by volume. Replacing a 600-calorie lunch with a 200-calorie salad doesn't just reduce calories — it leaves a genuine energy deficit that your body recognises and responds to with hunger.
                     </p>
@@ -209,10 +209,10 @@ export default function AlwaysHungry() {
 
                 {/* H3: 4. Blood sugar is spiking and crashing */}
                 <div className="mb-5">
-                  <h3 className="font-sans font-medium text-xl text-near-black mt-8 mb-3">
+                  <h3 className="font-sans font-medium text-xl text-theme-primary mt-8 mb-3">
                     4. Blood sugar is spiking and crashing
                   </h3>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Some foods marketed as healthy cause the same blood sugar spike-and-crash cycle as the junk food they replaced. Rice cakes, dried fruit, fruit juice, flavoured low-fat yogurt, and most breakfast cereals cause rapid rises in blood sugar followed by a crash — which the body interprets as hunger, even when it has adequate energy stored.
                     </p>
@@ -227,10 +227,10 @@ export default function AlwaysHungry() {
 
                 {/* H3: 5. Meals are eaten too quickly */}
                 <div className="mb-5">
-                  <h3 className="font-sans font-medium text-xl text-near-black mt-8 mb-3">
+                  <h3 className="font-sans font-medium text-xl text-theme-primary mt-8 mb-3">
                     5. Meals are eaten too quickly
                   </h3>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Satiety hormones take approximately 20 minutes to signal fullness to the brain. Eating a meal in under 10 minutes — which most people do when eating at a desk or standing in a kitchen — means the fullness signal arrives after the plate is already cleared.
                     </p>
@@ -242,10 +242,10 @@ export default function AlwaysHungry() {
 
                 {/* H2: How to build meals that actually fill you up */}
                 <div className="mb-5">
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-4">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-4">
                     How to build meals that actually fill you up
                   </h2>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Every meal needs three things to produce a lasting satiety response: a meaningful protein source, a source of healthy fat, and enough fibre-rich carbohydrate to provide sustained energy without a blood sugar spike.
                     </p>
@@ -269,10 +269,10 @@ export default function AlwaysHungry() {
 
                 {/* H2: Where to go from here */}
                 <div className="mb-5">
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-4">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-4">
                     Where to go from here
                   </h2>
-                  <div className="font-sans text-base text-text-gray leading-[1.7] mb-5">
+                  <div className="font-sans text-base text-theme-secondary leading-[1.7] mb-5">
                     <p className="mb-4">
                       Persistent hunger when eating healthily is almost always fixable without counting calories, starting over, or giving up the foods you've worked to include. It usually requires just two or three deliberate changes to how meals are composed.
                     </p>
@@ -283,20 +283,20 @@ export default function AlwaysHungry() {
                 </div>
 
                 {/* Bottom Email Opt-in Box */}
-                <div className="bg-sage-light rounded-xl p-6 my-8">
-                  <p className="font-sans text-xs uppercase tracking-widest text-sage font-medium mb-2">
+                <div className="bg-theme-sage-light rounded-xl p-6 my-8">
+                  <p className="font-sans text-xs uppercase tracking-widest text-theme-sage font-medium mb-2">
                     FREE DOWNLOAD
                   </p>
-                  <h3 className="font-sans text-lg font-bold text-near-black mb-2">
+                  <h3 className="font-sans text-lg font-bold text-theme-primary mb-2">
                     Get the Clean Eating Starter Guide — free
                   </h3>
-                  <p className="font-sans text-sm text-text-gray mb-4">
+                  <p className="font-sans text-sm text-theme-secondary mb-4">
                     A 5-day meal plan and shopping list designed around meals that actually fill you up. Download it free and use it this week.
                   </p>
                   <input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full border border-border-gray rounded-full px-4 py-2 text-sm mb-3 font-sans"
+                    className="w-full border border-theme-border rounded-full px-4 py-2 text-sm mb-3 font-sans"
                   />
                   <a 
                     href="[SYSTEME_OPTIN_URL]"
@@ -308,7 +308,7 @@ export default function AlwaysHungry() {
 
                 {/* Related Articles Section */}
                 <div>
-                  <h2 className="font-sans font-bold text-2xl text-near-black mt-12 mb-6">
+                  <h2 className="font-sans font-bold text-2xl text-theme-primary mt-12 mb-6">
                     Further reading
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -316,15 +316,15 @@ export default function AlwaysHungry() {
                       <Link
                         key={index}
                         to={article.link}
-                        className="bg-white border border-border-gray rounded-xl p-4 hover:border-sage transition-colors"
+                        className="bg-theme-surface border border-theme-border rounded-xl p-4 hover:border-theme-sage transition-colors"
                       >
-                        <h3 className="font-sans text-sm font-medium text-near-black mb-1">
+                        <h3 className="font-sans text-sm font-medium text-theme-primary mb-1">
                           {article.title}
                         </h3>
-                        <p className="font-sans text-xs text-text-gray mb-3">
+                        <p className="font-sans text-xs text-theme-secondary mb-3">
                           {article.description}
                         </p>
-                        <span className="font-sans text-sm text-sage font-medium">
+                        <span className="font-sans text-sm text-theme-sage font-medium">
                           Read article →
                         </span>
                       </Link>
@@ -337,17 +337,17 @@ export default function AlwaysHungry() {
               <div className="hidden md:block lg:col-span-1">
                 <div className="sticky top-24 self-start space-y-4">
                   {/* Box 1 - Email Opt-in */}
-                  <div className="bg-sage-light rounded-xl p-5">
-                    <h3 className="font-sans text-base font-bold text-near-black mb-2">
+                  <div className="bg-theme-sage-light rounded-xl p-5">
+                    <h3 className="font-sans text-base font-bold text-theme-primary mb-2">
                       Get the free starter guide
                     </h3>
-                    <p className="font-sans text-sm text-text-gray mb-4">
+                    <p className="font-sans text-sm text-theme-secondary mb-4">
                       A 5-day meal plan built around meals that actually keep you full. Free to download.
                     </p>
                     <input 
                       type="email" 
                       placeholder="Enter your email"
-                      className="w-full border border-border-gray rounded-full px-4 py-2 text-sm mb-3 font-sans"
+                      className="w-full border border-theme-border rounded-full px-4 py-2 text-sm mb-3 font-sans"
                     />
                     <a 
                       href="[SYSTEME_OPTIN_URL]"
@@ -358,13 +358,13 @@ export default function AlwaysHungry() {
                   </div>
 
                   {/* Box 2 - Related Links */}
-                  <div className="bg-white border border-border-gray rounded-xl p-5 mt-4">
-                    <h3 className="font-sans text-sm font-medium text-near-black mb-3">
+                  <div className="bg-theme-surface border border-theme-border rounded-xl p-5 mt-4">
+                    <h3 className="font-sans text-sm font-medium text-theme-primary mb-3">
                       You might also like
                     </h3>
-                    <div className="font-sans text-sm text-sage space-y-3">
+                    <div className="font-sans text-sm text-theme-sage space-y-3">
                       {sidebarLinks.map((link, index) => (
-                        <Link key={index} to={link.link} className="block hover:text-sage-dark transition-colors">
+                        <Link key={index} to={link.link} className="block hover:text-theme-sage-dark transition-colors">
                           {link.name}
                         </Link>
                       ))}

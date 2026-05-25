@@ -1,4 +1,3 @@
-import React from 'react';
 import EmailCapture from '../components/EmailCapture';
 
 export default function About() {
@@ -39,36 +38,36 @@ export default function About() {
   return (
     <div className="w-full">
       {/* Section 1: Hero */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[850px] text-center space-y-6">
           <span className="eyebrow">About</span>
-          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-near-black font-serif">
+          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-theme-primary font-serif">
             Healthy eating should feel simple — not like another thing to fail at.
           </h1>
-          <p className="font-sans text-[16px] text-text-gray max-w-[680px] mx-auto leading-[1.7]">
+          <p className="font-sans text-[16px] text-theme-secondary max-w-[680px] mx-auto leading-[1.7]">
             Healthy Eating Insights exists to cut through the noise and give women clear, honest, practical guidance on eating well — without the guilt, restriction, or confusion that most health content creates.
           </p>
         </div>
       </section>
 
       {/* Section 2: Mission */}
-      <section className="section-pad bg-light-gray border-t-0.5 border-b-0.5 border-border-gray">
+      <section className="section-pad bg-theme-alt border-t-0.5 border-b-0.5 border-theme-border">
         <div className="container-custom max-w-[1100px] mx-auto space-y-12">
           <div className="text-center space-y-3">
             <span className="eyebrow">Our mission</span>
-            <h2 className="text-[32px] md:text-[36px] text-near-black font-serif">Why we do this.</h2>
+            <h2 className="text-[32px] md:text-[36px] text-theme-primary font-serif">Why we do this.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {missions.map((mission, idx) => (
               <div
                 key={idx}
-                className="bg-white border-0.5 border-border-gray rounded-card p-6 border-t-[3px] border-t-sage text-left flex flex-col space-y-3"
+                className="bg-theme-surface border-0.5 border-theme-border rounded-card p-6 border-t-[3px] border-t-theme-sage text-left flex flex-col space-y-3"
               >
-                <h3 className="font-serif text-[18px] text-near-black">
+                <h3 className="font-serif text-[18px] text-theme-primary">
                   {mission.title}
                 </h3>
-                <p className="font-sans text-[13px] text-text-gray leading-[1.6]">
+                <p className="font-sans text-[13px] text-theme-secondary leading-[1.6]">
                   {mission.desc}
                 </p>
               </div>
@@ -78,11 +77,11 @@ export default function About() {
       </section>
 
       {/* Section 3: Values */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[900px] mx-auto space-y-12">
           <div className="text-center space-y-3">
             <span className="eyebrow">What we believe</span>
-            <h2 className="text-[32px] md:text-[36px] text-near-black font-serif">Our values.</h2>
+            <h2 className="text-[32px] md:text-[36px] text-theme-primary font-serif">Our values.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
@@ -91,10 +90,10 @@ export default function About() {
                 {/* 8px sage green dot */}
                 <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-sage mt-2" />
                 <div className="space-y-2">
-                  <h3 className="font-sans font-bold text-[14px] text-near-black leading-none">
+                  <h3 className="font-sans font-bold text-[14px] text-theme-primary leading-none">
                     {val.title}
                   </h3>
-                  <p className="font-sans text-[13px] text-text-gray leading-[1.6]">
+                  <p className="font-sans text-[13px] text-theme-secondary leading-[1.6]">
                     {val.desc}
                   </p>
                 </div>

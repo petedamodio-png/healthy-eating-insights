@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,15 +8,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        'sage': '#8FBF8A',
-        'sage-dark': '#4A7A46',
-        'sage-light': '#D6EDD4',
-        'off-white': '#FAFAF8',
-        'light-gray': '#F2F2EF',
-        'border-gray': '#DDDDDA',
-        'text-gray': '#6B6B6B',
-        'near-black': '#1A1A1A',
-        'warm-gold': '#C9A96E',
+        theme: {
+          bg: 'var(--color-bg)',
+          surface: 'var(--color-surface)',
+          alt: 'var(--color-alt)',
+          border: 'var(--color-border)',
+          primary: 'var(--color-text-primary)',
+          secondary: 'var(--color-text-secondary)',
+          sage: 'var(--color-sage)',
+          'sage-dark': 'var(--color-sage-dark)',
+          'sage-light': 'var(--color-sage-light)',
+          gold: 'var(--color-gold)',
+          dark: 'var(--color-dark)',
+          nav: 'var(--color-nav-bg)',
+        },
+        'sage': 'var(--color-sage)',
+        'sage-dark': 'var(--color-sage-dark)',
+        'sage-light': 'var(--color-sage-light)',
+        'off-white': 'var(--color-bg)',
+        'light-gray': 'var(--color-alt)',
+        'border-gray': 'var(--color-border)',
+        'text-gray': 'var(--color-text-secondary)',
+        'near-black': 'var(--color-text-primary)',
+        'warm-gold': 'var(--color-gold)',
       },
       fontFamily: {
         serif: ['"DM Serif Display"', 'serif'],
@@ -33,4 +48,3 @@ export default {
   },
   plugins: [],
 }
-

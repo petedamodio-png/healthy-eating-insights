@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function EmailCapture() {
@@ -12,7 +12,7 @@ export default function EmailCapture() {
   };
 
   return (
-    <section className="bg-near-black py-16 px-5 border-t border-b border-border-gray">
+    <section className="bg-theme-dark py-16 px-5 border-t border-b border-theme-border">
       <div className="max-w-[680px] mx-auto text-center flex flex-col items-center space-y-6">
         
         {/* H3 Headline */}
@@ -21,7 +21,7 @@ export default function EmailCapture() {
         </h3>
         
         {/* Body Text */}
-        <p className="font-sans text-[14px] leading-relaxed text-[#DDDDDA] max-w-[580px]">
+        <p className="font-sans text-[14px] leading-relaxed text-theme-border max-w-[580px]">
           A practical PDF guide covering the fundamentals of eating well, a simple 5-day meal plan, and a shopping list you'll actually use.
         </p>
 
@@ -33,7 +33,7 @@ export default function EmailCapture() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email address"
             required
-            className="w-full bg-white text-near-black px-5 py-3 rounded-[24px] text-[14px] font-sans border-0 focus:ring-1 focus:ring-sage placeholder-text-gray/50"
+            className="w-full bg-theme-surface text-theme-primary px-5 py-3 rounded-[24px] text-[14px] font-sans border-0 focus:ring-1 focus:ring-theme-sage placeholder-theme-secondary/50"
           />
           <button
             type="submit"

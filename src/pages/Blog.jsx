@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import EmailCapture from '../components/EmailCapture';
 import articleHeroImage from '../assets/images/howtostarthealthyeatinghero.png';
+import proteinBowlImage from '../assets/images/protein-bowl.png';
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -77,20 +78,20 @@ export default function Blog() {
   return (
     <div className="w-full">
       {/* Section 1: Hero */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-theme-bg">
         <div className="container-custom max-w-[800px] text-center space-y-6">
           <span className="eyebrow">The blog</span>
-          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-near-black font-serif">
+          <h1 className="text-[40px] md:text-[48px] leading-[1.15] text-theme-primary font-serif">
             Practical guides for eating well, every day.
           </h1>
-          <p className="font-sans text-[16px] text-text-gray max-w-[600px] mx-auto leading-[1.7]">
+          <p className="font-sans text-[16px] text-theme-secondary max-w-[600px] mx-auto leading-[1.7]">
             Honest, useful content for women who want to feel better through food — no fads, no fluff.
           </p>
         </div>
       </section>
 
       {/* Section 2: Filter + Articles */}
-      <section className="section-pad bg-light-gray border-t-0.5 border-b-0.5 border-border-gray">
+      <section className="section-pad bg-theme-alt border-t-0.5 border-b-0.5 border-theme-border">
         <div className="container-custom space-y-12">
           
           {/* Category Filter Pills (Functional) */}
@@ -104,7 +105,7 @@ export default function Blog() {
                   className={`btn-pill border-0.5 text-[13px] font-sans px-5 py-2 cursor-pointer transition-colors ${
                     isActive
                       ? "bg-sage text-white border-transparent hover:bg-sage-dark"
-                      : "bg-white text-text-gray border-border-gray hover:bg-off-white"
+                      : "bg-theme-surface text-theme-secondary border-theme-border hover:bg-theme-bg"
                   }`}
                 >
                   {cat}
@@ -120,7 +121,7 @@ export default function Blog() {
                 <Link
                   key={idx}
                   to={art.link || "#"}
-                  className="bg-white border-0.5 border-border-gray rounded-card overflow-hidden flex flex-col justify-between hover:border-sage transition-colors"
+                  className="bg-theme-surface border-0.5 border-theme-border rounded-card overflow-hidden flex flex-col justify-between hover:border-theme-sage transition-colors"
                 >
                   <div>
                     {/* Image block - real image for specific article, placeholder for others */}
@@ -131,14 +132,14 @@ export default function Blog() {
                         className="w-full h-48 object-cover rounded-t-xl"
                       />
                     ) : art.link === "/blog/always-hungry-eating-healthy" ? (
-                      <div className="h-48 bg-sage-light flex items-center justify-center rounded-t-xl">
-                        <p className="font-sans text-sm text-sage-dark text-center px-8">
-                          Hero image — satisfying grain bowl with visible protein, avocado, colourful vegetables
-                        </p>
-                      </div>
+                      <img
+                        src={proteinBowlImage}
+                        alt="Protein grain bowl with chicken, egg, avocado, vegetables, and quinoa"
+                        className="w-full h-48 object-cover rounded-t-xl"
+                      />
                     ) : (
-                      <div className="h-[90px] bg-sage-light flex flex-col items-center justify-center border-b-0.5 border-border-gray select-none">
-                        <span className="font-serif text-[13px] text-near-black italic">
+                      <div className="h-[90px] bg-theme-sage-light flex flex-col items-center justify-center border-b-0.5 border-theme-border select-none">
+                        <span className="font-serif text-[13px] text-theme-primary italic">
                           {art.label}
                         </span>
                       </div>
@@ -148,11 +149,11 @@ export default function Blog() {
                       <span className="eyebrow text-[10px]">
                         {art.category}
                       </span>
-                      <h2 className="font-sans font-bold text-[15px] text-near-black leading-snug font-serif-heading">
+                      <h2 className="font-sans font-bold text-[15px] text-theme-primary leading-snug font-serif-heading">
                         {art.title}
                       </h2>
                       {art.description && (
-                        <p className="font-sans text-[13px] text-text-gray leading-relaxed">
+                        <p className="font-sans text-[13px] text-theme-secondary leading-relaxed">
                           {art.description}
                         </p>
                       )}
@@ -161,14 +162,14 @@ export default function Blog() {
                   {/* Footer read time link */}
                   <div className="px-5 pb-5 pt-1 text-left">
                     <span
-                      className="font-sans text-[13px] text-sage hover:text-sage-dark transition-colors font-medium inline-flex items-center"
+                      className="font-sans text-[13px] text-theme-sage hover:text-theme-sage-dark transition-colors font-medium inline-flex items-center"
                       dangerouslySetInnerHTML={{ __html: art.readTime }}
                     />
                   </div>
                 </Link>
               ))
             ) : (
-              <div className="col-span-full py-12 text-center text-text-gray font-sans">
+              <div className="col-span-full py-12 text-center text-theme-secondary font-sans">
                 No articles found in this category.
               </div>
             )}

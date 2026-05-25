@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // Layout components
@@ -18,6 +18,9 @@ import Contact from './pages/Contact';
 import HowToStartEatingHealthy from './pages/HowToStartEatingHealthy';
 import AlwaysHungry from './pages/AlwaysHungry';
 
+const GA_MEASUREMENT_ID = 'G-0CX2X96MGX';
+let lastTrackedPagePath = '';
+
 // Scroll to top helper
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,11 +32,36 @@ function ScrollToTop() {
   return null;
 }
 
+function AnalyticsTracker() {
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    const pagePath = `${pathname}${search}`;
+
+    if (pagePath === lastTrackedPagePath || typeof window.gtag !== 'function') {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      lastTrackedPagePath = pagePath;
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        page_path: pagePath,
+        page_title: document.title,
+      });
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [pathname, search]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-off-white select-none">
+      <AnalyticsTracker />
+      <div className="flex flex-col min-h-screen bg-theme-bg select-none">
         
         {/* Sticky Header */}
         <Header />
